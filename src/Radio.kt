@@ -10,6 +10,7 @@ fun main (args: Array<String>) {
     var opciondos = 6
     var opcionradio = 6
     var am = 90
+    var freq1 = 90
     var fm = 1200
     var opcionvol = 50
     var vol = 50
@@ -57,6 +58,26 @@ fun main (args: Array<String>) {
                                             println("5: Poner un valor exacto de frequencia")
                                             println("6:Salir al menu de modulaciones")
                                             am = readLine()!!.toInt()
+
+                                            /** menu para cambiar de frequencia **/
+                                            when (am){
+                                                1 -> {freq1 = freq1 + 1
+                                                    println("La nueva frecuencia es de $freq1")
+                                                    println()
+                                                }
+                                                2 -> {freq1 = freq1 - 1
+                                                    println("La nueva frecuencia es de $freq1")
+                                                    println()
+                                                }
+                                                3 -> {freq1 = freq1 + 5
+                                                    println("La nueva frecuencia es de $freq1")
+                                                    println()
+                                                }
+                                                4 -> {freq1 = freq1 - 5
+                                                    println("La nueva frecuencia es de $freq1")
+                                                    println()
+                                                }
+                                            }
 /** falta poner que hacer para cada una de estas opciones **/
                                         }
                                     }
@@ -93,7 +114,6 @@ fun main (args: Array<String>) {
                                         else {println("El valor $numero no es aceptado, porfavor ingrese un numero " +
                                                 "entre 0 y 100")
                                             println()}
- /** HACER QUE NO ACEPTE NUMERO MAYORES A 100 o menores a 0 **/
                                     }
                                     4 -> {
                                         println("Saliendo a menu de opciones")
